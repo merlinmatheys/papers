@@ -1,0 +1,10 @@
+<h2>Hello</h2>
+
+<%= simple_form_for @paper do |f| %>
+  <%= f.input :color %>
+  <%= f.input :layers %>
+  <%= f.input :pattern %>
+  <%= f.input :sweetness %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.button :submit %>
+<% end %>
