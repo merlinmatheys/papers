@@ -1,6 +1,13 @@
-<% @papers.each do |paper| %>
-<%= paper.color %>
-<%= paper.layers %>
-<%= paper.pattern %>
-<%= paper.sweetness %>
-<% end %>
+<div class="cards-map">
+    <div class="cards">
+      <% @papers.each do |paper| %>
+        <div class="card" style="background-image: url('<%= cl_image_path paper.photo.key %>')">
+          <%= paper.sweetness %>
+          <%= paper.pattern %>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWVybGlubm4iLCJhIjoiY2s2Yzc4Z3JuMDg2MTNxb214ODQ3b3ZxcCJ9.x0IynmKi7uBWHD19xTSkGQ'>
+    </div>

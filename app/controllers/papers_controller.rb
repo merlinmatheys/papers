@@ -37,6 +37,6 @@ class PapersController < ApplicationController
   private
 
   def paper_params
-    params.require(:paper).permit(:color, :layers, :pattern, :sweetness, :user_id)
+    params.require(:paper).permit(:color, :layers, :pattern, :sweetness, :user_id, :photo)
   end
 end
